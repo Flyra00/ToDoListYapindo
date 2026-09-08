@@ -31,6 +31,9 @@
             <main>
                 {{ $slot }}
             </main>
+
+            <!-- Floating Toast Notification -->
+            <x-toast />
         </div>
     </body>
 </html>

@@ -16,23 +16,6 @@
     <div class="py-8">
         <div class="max-w-3xl mx-auto sm:px-6 lg:px-8 space-y-6">
 
-            <!-- Flash Notification -->
-            @if (session('status'))
-                <div x-data="{ show: true }" x-show="show" x-transition class="flex items-center justify-between p-4 bg-emerald-50 border-l-4 border-emerald-500 rounded-r-lg shadow-sm">
-                    <div class="flex items-center">
-                        <svg class="w-5 h-5 text-emerald-500 me-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span class="text-sm font-medium text-emerald-800">{{ session('status') }}</span>
-                    </div>
-                    <button @click="show = false" class="text-emerald-500 hover:text-emerald-700 p-1">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-            @endif
-
             <!-- Overdue Warning Banner -->
             @if ($todo->isOverdue())
                 <div class="flex items-center p-4 bg-red-50 border-l-4 border-red-500 rounded-r-lg text-red-800 text-sm">
